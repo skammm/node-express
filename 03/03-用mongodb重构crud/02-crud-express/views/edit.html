@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   
+
+    <!-- Custom styles for this template -->
+    <link href="/public/css/main.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">修改页</h1>
+           
+
+          <form class="form-horizontal" action="/student/edit" method="post">
+            <!--
+              用来放一些需要被提交，但是不希望被用户看见的数据
+            -->
+            <input type="hidden" value="{{student.id}}" name="id">  
+            <div class="form-group">
+                <label for="inputName" class="col-sm-2 control-label">name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputName" placeholder="name" name="name" value="{{student.name}}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAge" class="col-sm-2 control-label">Age</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="inputAge" placeholder="age" name="age" value="{{student.age}}">
+                </div>
+              </div>
+                <div class="form-group">
+                    <label for="inputHobbies" class="col-sm-2 control-label">Hobbies</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputHobbies" placeholder="hobbies" name="hobbies" value="{{student.hobbies}}">
+                    </div>
+                </div>
+             
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+              </div>
+            </form>
+          
+        
+        </div>
+      </div>
+    </div>
+
+   
+  </body>
+</html>

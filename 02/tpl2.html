@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 注意：在服务端中，文件的路径就不要写相对路径了，
+  因为这个时候所有资源都是通过url来标识的
+  /这里就是url根路径的意思 -->
+  <link rel="stylesheet" href="/lib/dist/css/mui.min.css">
+		<!--App自定义的css-->
+	<link rel="stylesheet" type="text/css" href="././lib/dist/css/app.css"/>
+	
+</head>
+<body>
+  <div class="mui-content">
+      <div class="mui-card">
+          <ul class="mui-table-view">
+     
+              <li class="mui-table-view-divider">右侧无导航箭头</li>
+              {{each files}}
+              <li class="mui-table-view-cell"> {{$value}}<span class="mui-badge">5</span></li>
+              {{/each}} 
+          </ul>
+      </div>
+  </div>
+</body>
+
+</html>
